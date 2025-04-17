@@ -1,0 +1,225 @@
+@media (min-width: 768px) {
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  :root {
+    --main-color1: #255EEE;
+    --sub-color1: #87A9FF;
+    --sub-color2: #D2DFFF;
+    --text-color: #1d1d1d;
+    --text-color2: #D0D0D0;
+    --text-color3: #F5F5F0;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular', sans-serif;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+  }
+
+  .login-container {
+    width: 520px;
+    height: 420px;
+    border: 3px solid #87A9FF;
+    border-radius: 10px;
+    padding: 40px 32px;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.7) 0px 2px 8px 0px;
+    
+    
+  }
+
+  .title {
+    color: #255EEE;
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 65%;
+  height: 50px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 14px;
+  color: #333;
+  
+}
+
+.login-button {
+  height: 40px;
+  margin-bottom: 30px;
+  
+}
+
+.login-button button  {
+  height: 40px;
+  width: 65%;
+  padding: 0 16px;
+  background-color: #255EEE;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+  margin-top: 10px;
+}
+
+.login-links {
+  font-size: 15px;
+  color: #999;
+  margin-top: 10px;
+}
+
+.login-links a {
+  color: #777;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.login-links span {
+  color: #bbb;
+}
+
+
+}
+
+
+/* 모바일화면 */
+
+@media (max-width: 767px) {
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  :root {
+    --main-color1: #255EEE;
+    --sub-color1: #87A9FF;
+    --sub-color2: #D2DFFF;
+    --text-color: #1d1d1d;
+    --text-color2: #D0D0D0;
+    --text-color3: #F5F5F0;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular', sans-serif;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .login-container {
+    width: 370px;
+    height: 400px;
+    border: 3px solid #87A9FF;
+    border-radius: 10px;
+    padding: 40px 32px;
+    text-align: center;
+    box-shadow: rgba(99, 99, 99, 0.7) 0px 2px 8px 0px;
+    
+  }
+
+  .title {
+    color: #255EEE;
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  width: 90%;
+  height: 48px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0 12px;
+  font-size: 13px;
+  color: #333;
+  
+}
+
+.login-button {
+  height: 40px;
+  margin-bottom: 20px;
+  
+}
+
+.login-button button  {
+  height: 40px;
+  width: 90%;
+  padding: 0 16px;
+  background-color: #255EEE;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+  margin-top: 5px;
+  
+}
+
+.login-links {
+  font-size: 15px;
+  color: #999;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+.login-links a {
+  color: #777;
+  text-decoration: none;
+  margin: 0 6px;
+}
+
+.login-links span {
+  color: #bbb;
+}
+
+}

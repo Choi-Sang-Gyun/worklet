@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worklet Login</title>
+  <link rel="stylesheet" href="css/login2.css"/>
+</head>
+<body>
+  <div class="login-container">
+    <h2 class="title">WORKLET</h2>
+
+    <div class="login-form">
+        <div>
+          <input type="text" id="id" placeholder="아이디">
+        </div>
+        <div class="password-row">
+          <input type="password" id="pw" placeholder="비밀번호">
+        </div>
+        <div class="login-button">
+          <button type="submit">로그인</button>
+        </div> 
+      </div>
+
+    <div class="login-links">
+      <a href="#">아이디 찾기</a>
+      <span>|</span>
+      <a href="#">비밀번호 찾기</a>
+      <span>|</span>
+      <a href="#">회원가입</a>
+    </div>
+
+    </div>
+
+    <script>
+      var loginBtn = document.querySelector(".login-button");
+      var id = document.getElementById("id");
+      var pw = document.getElementById("pw");
+    
+      loginBtn.addEventListener("click", function () {
+        var redId = /^[a-z]+[a-z0-9]{5,19}$/g;
+        var redPw = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
+    
+        if (id.value === '') {
+          alert('아이디를 입력해주세요 (6~20자 영문자 또는 숫자 포함)');
+        } else if (!redId.test(id.value)) {
+          alert('아이디 형식이 올바르지 않습니다.');
+        } else if (pw.value === '') {
+          alert('비밀번호를 입력해주세요 (8~16자 영문, 숫자, 특수문자 포함)');
+        } else if (!redPw.test(pw.value)) {
+          alert('비밀번호 형식이 올바르지 않습니다.');
+        } else {
+          alert('로그인 성공');      
+        }
+      });
+    </script>
+
+
+    
+
+
+    
+
+</body>
+</html>

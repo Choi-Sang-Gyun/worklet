@@ -1,0 +1,453 @@
+ /* PC (데스크탑) 버전 */
+ @media (min-width: 768px) {
+
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+:root {
+  --main-color1: #255EEE;
+  --sub-color1: #87A9FF;
+  --sub-color2: #D2DFFF;
+  --text-color: #1d1d1d;
+  --text-color2: #D0D0D0;
+  --text-color3: #F5F5F0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard-Regular', sans-serif;
+}
+
+body {
+  
+  background-color: #f7dfdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol, li, dl, dd {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+.title {
+  color: #255EEE;
+  font-size: 45px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.form-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 100%;
+  max-width: 550px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 30px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+
+.form-row label {
+  width: 120px;
+  font-weight: bold;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.form-row input[type="text"],
+.form-row input[type="password"],
+.form-row input[type="email"] {
+  flex: 1;
+  padding: 13px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+.small {
+  width: 60px;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.radio-group,
+.option-group,
+.birth-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 16px;
+  flex: 1;
+}
+
+.radio-group label,
+.option-group label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: var(--main-color1);
+  width: 16px;
+  height: 16px;
+}
+
+.terms-box {
+  border: 1px solid #ccc;
+  padding: 24px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.terms-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  
+}
+
+.terms-inner-box {
+  border: 1px solid #eee;
+  background-color: #f7dfdc;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.terms-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.terms-item label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.terms-item a {
+  font-size: 12px;
+  color: var(--main-color1);
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.terms-all label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.terms-desc {
+  font-size: 12px;
+  color: #555;
+  margin-top: 6px;
+  margin-left: 24px;
+  line-height: 1.5;
+}
+
+.submit-btn {
+  background-color: var(--main-color1);
+  color: white;
+  padding: 14px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #1f4fd0;
+}
+
+.error-message {
+  color: red;
+
+}
+
+ }
+
+
+
+/* 모바일 (최대 너비 767px까지 적용) */
+@media (max-width: 767px) {
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  
+  :root {
+    --main-color1: #255EEE;
+    --sub-color1: #87A9FF;
+    --sub-color2: #D2DFFF;
+    --text-color: #1d1d1d;
+    --text-color2: #D0D0D0;
+    --text-color3: #F5F5F0;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular', sans-serif;
+  }
+  
+  body {
+    background: var(--text-color3);
+    background-color: #f7dfdc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul, ol, li, dl, dd {
+    list-style: none;
+  }
+  
+  img {
+    vertical-align: top;
+  }
+
+  .title {
+    color: #255EEE;
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-container {
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+  
+  .form-row label {
+    width: 120px;
+    font-weight: bold;
+    margin-top: 8px;
+    line-height: 1.6;
+  }
+  
+  .form-row input[type="text"],
+  .form-row input[type="password"],
+  .form-row input[type="email"] {
+    flex: 1;
+    padding: 8px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  
+  .small {
+    width: 60px;
+    margin-right: 8px;
+    font-size: 12px;
+  }
+  
+  .radio-group,
+  .option-group,
+  .birth-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    flex: 1;
+  }
+  
+  .radio-group label,
+  .option-group label {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  
+  input[type="checkbox"],
+  input[type="radio"] {
+    accent-color: var(--main-color1);
+    width: 16px;
+    height: 16px;
+  }
+  
+  .terms-box {
+    border: 1px solid #ccc;
+    padding: 24px;
+    border-radius: 12px;
+    background-color: #fff;
+  }
+  
+  .terms-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    
+  }
+  
+  .terms-inner-box {
+    border: 1px solid #eee;
+    background-color: #f7dfdc;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  
+  .terms-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .terms-item label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .terms-item a {
+    font-size: 12px;
+    color: var(--main-color1);
+    text-decoration: underline;
+    white-space: nowrap;
+  }
+  
+  .terms-all label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  
+  .terms-desc {
+    font-size: 12px;
+    color: #555;
+    margin-top: 6px;
+    margin-left: 24px;
+    line-height: 1.5;
+  }
+  
+  .submit-btn {
+    background-color: var(--main-color1);
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #1f4fd0;
+  }
+  
+}
+
+ 
+
+  
+
+  /* box shadow는 box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+ 이거  쓰면 적당 할 ㅓㄱ 같아여 */
+
+
+/* :root는    h3{
+            color: var(--main-color1);
+        }
+이렇게 쓰셔야 합니다 */
+  

@@ -257,6 +257,766 @@
         width: 100%;
     }
 
+    
+    /* -----------sec02---------- */
+    .sec02 {
+        width: 100%;
+        margin: 40px auto;
+    }
+
+    .sec02 h2 {
+        color: var(--main-color1);
+        font-size: 2.5rem;
+        margin-bottom: 0.3em;
+    }
+
+    .sec02>p {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 1.5em;
+    }
+
+    .info.flex {
+        display: flex;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .my-info {
+        flex: 1;
+    }
+
+    .name {
+        font-size: 2.1rem;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+    }
+
+    .birth {
+        color: #888;
+        font-size: 1.1rem;
+        margin-bottom: 0.3em;
+    }
+
+    .birth span {
+        font-size: 1rem;
+        color: #bbb;
+        margin-left: 8px;
+    }
+
+    .gender {
+        margin-bottom: 1.3em;
+        color: #444;
+        font-size: 1.1rem;
+    }
+
+    .email,
+    .phone,
+    .address {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        margin-bottom: 0.7em;
+        color: #444;
+        font-size: 1rem;
+    }
+
+    .email img,
+    .phone img,
+    .address img {
+        width: 18px;
+        height: 18px;
+        opacity: 0.7;
+    }
+
+    .my-picture {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        position: relative;
+        border: 1px solid #9f9f9f;
+        transform: translateX(-50px);
+        border-radius: 5px;
+        width: 150px;
+        height: 200px;
+    }
+
+    .picture-label {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .plus-box {
+        width: 120px;
+        height: 120px;
+        background: #f5f5f5;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        border: 2px dashed #bbb;
+        transition: border-color 0.2s;
+    }
+
+    .plus-box:hover {
+        border-color: var(--sub-color1);
+    }
+
+    .plus-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .add-text {
+        font-size: 1.1rem;
+        color: #888;
+        margin-top: 4px;
+        font-weight: 500;
+    }
+
+    .my-picture input[type="file"] {
+        width: 150px;
+        height: 200px;
+        display: none;
+    }
+
+    .my-picture img {
+        width: 40px;
+        height: 40px;
+        border-radius: 16px;
+        object-fit: cover;
+        margin-bottom: 8px;
+    }
+
+    .my-picture>img[alt=""] {
+        /* 연필 아이콘 위치 조정 */
+        position: absolute;
+        top: 0;
+        right: -50px;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        padding: 4px;
+        cursor: pointer;
+    }
+
+    /* -----------sec03---------- */
+
+    .sec03 {
+        width: 100%;
+        margin: 60px auto;
+    }
+
+    .sec03 h2 {
+        color: var(--main-color1);
+        font-size: 2.5rem;
+        margin-bottom: 0.3em;
+    }
+
+    .sec03>.plus {
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+    .sec03 .plus figure {
+        align-items: center;
+        color: var(--text-color2);
+        font-size: 16px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .sec03 .plus figure img {
+        width: 25px;
+        height: 25px;
+        margin-right: 13px;
+    }
+
+
+    .sec03 .plus>p {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .sec03 .education {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        position: relative;
+    }
+
+    .sec03 .education>img {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+    }
+
+
+    .sec03 .education .school h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .sec03 .education .school p {
+        color: var(--text-color2);
+        font-size: 14px;
+    }
+
+    .sec03 .education .edu-info {
+        margin-left: 30px;
+        color: var(--text-color2);
+        font-size: 12px;
+        padding: 3px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .sec03 .education .edu-info span:nth-child(1) {
+        padding-right: 15px;
+    }
+
+    .sec03 .education .edu-info span:nth-child(2) {
+        padding-left: 15px;
+    }
+
+    .sec03 .education .edu-info span:nth-child(1) {
+        border-right: 1px solid var(--text-color2);
+    }
+
+    /* ----add-edu-form------ */
+    .sec03 .add-edu-form {
+        display: none;
+        gap: 12px;
+        flex-direction: column;
+        margin-top: 18px;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 15px;
+    }
+
+    .sec03 .add-edu-form.add {
+        display: flex;
+    }
+
+
+    .sec03 .add-edu-form>.flex input {
+        width: 19%;
+    }
+
+    .sec03 .add-edu-form input,
+    .sec03 .add-edu-form select {
+        padding: 8px 14px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 1rem;
+        background: #fafbfc;
+    }
+
+    .sec03 .add-edu-form input:focus,
+    .sec03 .add-edu-form select:focus {
+        border-color: #2563eb;
+        outline: none;
+    }
+
+    .sec03 .add-edu-form .button {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 15px;
+    }
+
+    .sec03 .btn-save {
+        padding: 15px 20px;
+        background: #2563eb;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.2s;
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    .sec03 .btn-del {
+        padding: 15px 20px;
+        background: var(--sub-color2);
+        border: 1px solid var(--main-color1);
+        color: var(--main-color1);
+        border-radius: 12px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.2s;
+        width: 150px;
+    }
+
+    .sec03 .btn-save:hover {
+        background: #1741b6;
+    }
+
+    .sec03 .add-edu-form .input-school {
+        width: 238px;
+        margin-bottom: 20px;
+    }
+
+    .sec03 .add-edu-form>.flex {
+        justify-content: space-between;
+    }
+
+    .sec03 .add-edu-form .widthstyle {
+        width: 150px;
+    }
+
+
+
+
+
+    /* ------------sec04----------- */
+
+    .sec04 {
+        width: 100%;
+        margin: 40px auto;
+    }
+
+    .sec04 h2 {
+        color: var(--main-color1);
+        font-size: 2.5rem;
+        margin-bottom: 0.3em;
+    }
+
+    .sec04>.plus {
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+
+    .sec04 .plus figure {
+        align-items: center;
+        color: var(--text-color2);
+        font-size: 16px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .sec04 .plus figure img {
+        width: 25px;
+        height: 25px;
+        margin-right: 13px;
+    }
+
+
+
+    .sec04 .plus>p {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .sec04 .com-list>div {
+        margin-bottom: 20px;
+    }
+
+    .sec04 .education {
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 30px;
+        position: relative;
+    }
+
+    .sec04 .education>img {
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 22px;
+        height: 22px;
+        cursor: pointer;
+    }
+
+
+    .sec04 .education .school h4 {
+        font-size: 18px;
+        margin-bottom: 10px;
+        padding: 0;
+        margin-bottom: 10px;
+    }
+
+    .sec04 .education .school p {
+        color: var(--text-color2);
+        font-size: 14px;
+    }
+
+    .sec04 .education .edu-info {
+        margin-left: 30px;
+        color: var(--text-color2);
+        font-size: 12px;
+        padding: 3px 0;
+    }
+
+    .sec04 .education .edu-info span {
+        padding: 0 15px;
+    }
+
+    .sec04 .education .edu-info span:nth-child(1) {
+        border-right: 1px solid var(--text-color2);
+    }
+
+    /* ----add-edu-form------ */
+    .sec04 .add-edu-form {
+        display: none;
+        gap: 12px;
+        flex-direction: column;
+        margin-top: 18px;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 15px;
+    }
+
+    .sec04 .add-edu-form.add {
+        display: flex;
+    }
+
+    .sec04 .add-edu-form>.flex input {
+        width: 23%;
+    }
+
+    .sec04 .add-edu-form input {
+        margin-bottom: 20px;
+    }
+
+
+    .sec04 .add-edu-form input,
+    .sec04 .add-edu-form select,
+    .sec04 .add-edu-form textarea {
+        padding: 8px 14px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 1rem;
+        background: #fafbfc;
+    }
+
+    .sec04 .add-edu-form input:focus,
+    .sec04 .add-edu-form select:focus,
+    .sec04 .add-edu-form textarea:focus {
+        border-color: #2563eb;
+        outline: none;
+    }
+
+    .sec04 .add-edu-form .button {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .sec04 .btn-save {
+        padding: 15px 20px;
+        background: #2563eb;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.2s;
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    .sec04 .btn-del {
+        padding: 15px 20px;
+        background: var(--sub-color2);
+        border: 1px solid var(--main-color1);
+        color: var(--main-color1);
+        border-radius: 12px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.2s;
+        width: 150px;
+    }
+
+    .sec04 .btn-save:hover {
+        background: #1741b6;
+    }
+
+    .sec04 .add-edu-form .input-school {
+        width: 238px;
+    }
+
+
+    .sec04 .add-edu-form>.flex {
+        justify-content: space-between;
+    }
+
+    .sec04 .add-edu-form .widthstyle {
+        width: 220px;
+    }
+
+    .sec04 .add-edu-form textarea {
+        padding: 10px;
+        height: 120px;
+        resize: none;
+        width: 100%;
+    }
+
+    .sec04 .add-edu-form>p {
+        font-size: 14px;
+        color: var(--text-color2);
+    }
+
+    .sec04 .add-edu-form>p span {
+        color: var(--main-color1);
+    }
+
+
+    /* -----------------sec05--------------- */
+
+    .sec05 {
+        width: 100%;
+        margin: 60px auto;
+    }
+
+    .sec05 h2 {
+        color: var(--main-color1);
+        font-size: 2.5rem;
+        margin-bottom: 0.3em;
+    }
+
+    .sec05>.plus {
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+
+
+    .sec05 .plus figure {
+        align-items: center;
+        color: var(--text-color2);
+        font-size: 16px;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    .sec05 .plus figure img {
+        width: 25px;
+        height: 25px;
+        margin-right: 13px;
+    }
+
+    .sec05 .plus>p {
+        font-weight: bold;
+        font-size: 1.1rem;
+    }
+
+    .license-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        margin-top: 20px;
+    }
+
+    .license-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        width: 48%;
+    }
+
+    .license-card .name {
+        font-size: 1.2rem;
+        color: #111;
+    }
+
+    .license-card .org {
+        color: var(--text-color2);
+        font-size: 13px;
+    }
+
+    .license-card .date {
+        font-size: 13px;
+        color: var(--text-color2);
+        margin-top: 4px;
+    }
+
+
+    .add-license-form {
+        display: none;
+        gap: 10px;
+        margin-top: 15px;
+        background: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        flex-wrap: wrap;
+    }
+
+
+    .add-license-form input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        width: 24%;
+    }
+
+    .add-license-form .button {
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .sec05 .btn-license-save {
+        padding: 15px 20px;
+        background: #2563eb;
+        color: #fff;
+        border: none;
+        border-radius: 12px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.2s;
+        width: 150px;
+        margin-right: 10px;
+    }
+
+    .sec05 .btn-license-cancel {
+        padding: 15px 20px;
+        background: var(--sub-color2);
+        border: 1px solid var(--main-color1);
+        color: var(--main-color1);
+        border-radius: 12px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 500;
+        transition: 0.2s;
+        width: 150px;
+    }
+
+    .sec05 .btn-license-save:hover {
+        background: #1741b6;
+    }
+
+    .sec05 .add-license-form input:focus {
+        border-color: #2563eb;
+        outline: none;
+    }
+
+    /* ----------sec06------------- */
+    .sec06 {
+        width: 100%;
+        margin: 60px auto;
+    }
+
+    .sec06 h2 {
+        color: var(--main-color1);
+        font-size: 2.5rem;
+        margin-bottom: 0.3em;
+    }
+
+    .sec06>p {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 1.5em;
+    }
+
+    .introduceMyself {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 60px;
+    }
+
+    .resume-item {
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 50px;
+    }
+
+    .resume-item label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #444;
+        position: relative;
+    }
+
+    
+    .resume-item label img{
+        position: absolute;
+        right: 20px;
+        width: 22px;
+        height: 22px;
+        opacity: .6;
+        cursor: pointer;
+    }
+
+    .edit-icon {
+        width: 10px;
+        height: 10px;
+        margin-left: 8px;
+    }
+
+    .resume-item textarea {
+        width: 100%;
+        height: 180px;
+        border: 1px solid #007bff;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 16px;
+        resize: none;
+        outline: none;
+
+    }
+
+    .preview-btn {
+        margin-top: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .preview-btn:hover {
+        background-color: #0056b3;
+    }
+
+    
+    .sec06 .resume-item>p {
+        font-size: 14px;
+        color: var(--text-color2);
+        margin-bottom: 10px;
+        margin-right: 20px;
+        display: flex;
+        justify-self: flex-end;
+    }
+
+    .sec06 .resume-item>p span {
+        color: var(--main-color1);
+    }
+
+
 }
 
 
@@ -344,7 +1104,7 @@
 
     .left-sticky {
         position: relative;
-        height: 200vh;
+        height: 400vh;
         width: 100%;
     }
 
@@ -686,15 +1446,25 @@
         color: var(--text-color2);
         font-size: 14px;
         padding: 3px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
     }
 
-    .sec03 .education .edu-info span {
-        padding: 0 15px;
+    .sec03 .education .edu-info span:nth-child(1) {
+        padding-right: 15px;
+    }
+
+    .sec03 .education .edu-info span:nth-child(2) {
+        padding-left: 15px;
     }
 
     .sec03 .education .edu-info span:nth-child(1) {
         border-right: 1px solid var(--text-color2);
     }
+
+    .sec03 .graduration {}
 
     /* ----add-edu-form------ */
     .sec03 .add-edu-form {
@@ -710,6 +1480,11 @@
 
     .sec03 .add-edu-form.add {
         display: flex;
+    }
+
+
+    .sec03 .add-edu-form>.flex input {
+        width: 19%;
     }
 
     .sec03 .add-edu-form input,
@@ -766,6 +1541,7 @@
 
     .sec03 .add-edu-form .input-school {
         width: 238px;
+        margin-bottom: 20px;
     }
 
     .sec03 .add-edu-form>.flex {
@@ -775,6 +1551,8 @@
     .sec03 .add-edu-form .widthstyle {
         width: 150px;
     }
+
+
 
 
 
@@ -817,6 +1595,10 @@
     .sec04 .plus>p {
         font-weight: bold;
         font-size: 1.1rem;
+    }
+
+    .sec04 .com-list>div {
+        margin-bottom: 20px;
     }
 
     .sec04 .education {
@@ -878,6 +1660,15 @@
     .sec04 .add-edu-form.add {
         display: flex;
     }
+
+    .sec04 .add-edu-form>.flex input {
+        width: 23%;
+    }
+
+    .sec04 .add-edu-form input {
+        margin-bottom: 20px;
+    }
+
 
     .sec04 .add-edu-form input,
     .sec04 .add-edu-form select,
@@ -949,6 +1740,7 @@
         padding: 10px;
         height: 120px;
         resize: none;
+        width: 100%;
     }
 
     .sec04 .add-edu-form>p {
@@ -1095,6 +1887,104 @@
     .sec05 .add-license-form input:focus {
         border-color: #2563eb;
         outline: none;
+    }
+
+    /* ----------sec06------------- */
+    .sec06 {
+        width: 100%;
+        margin: 40px auto;
+        padding: 30px;
+    }
+
+    .sec06 h2 {
+        color: var(--main-color1);
+        font-size: 2.5rem;
+        margin-bottom: 0.3em;
+    }
+
+    .sec06>p {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-bottom: 1.5em;
+    }
+
+    .introduceMyself {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 60px;
+    }
+
+    .resume-item {
+        border-bottom: 1px solid #e0e0e0;
+        padding-bottom: 50px;
+    }
+
+    .resume-item label {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        color: #444;
+        position: relative;
+    }
+
+    
+    .resume-item label img{
+        position: absolute;
+        right: 20px;
+        width: 22px;
+        height: 22px;
+        opacity: .6;
+        cursor: pointer;
+    }
+
+    .edit-icon {
+        width: 10px;
+        height: 10px;
+        margin-left: 8px;
+    }
+
+    .resume-item textarea {
+        width: 100%;
+        height: 180px;
+        border: 1px solid #007bff;
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 16px;
+        resize: none;
+        outline: none;
+
+    }
+
+    .preview-btn {
+        margin-top: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 12px;
+        border-radius: 10px;
+        width: 100%;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .preview-btn:hover {
+        background-color: #0056b3;
+    }
+
+    
+    .sec06 .resume-item>p {
+        font-size: 14px;
+        color: var(--text-color2);
+        margin-bottom: 10px;
+        margin-right: 20px;
+        display: flex;
+        justify-self: flex-end;
+    }
+
+    .sec06 .resume-item>p span {
+        color: var(--main-color1);
     }
 
 

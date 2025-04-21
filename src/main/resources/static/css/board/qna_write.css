@@ -37,7 +37,7 @@ img {
 
 @media(min-width: 767px) {
     .imgbox { 
-        background-image: url("../../image/Rectangle180.png");
+        background-image: url("../../../templates/image/Rectangle180.png");
         text-align: center;
         height: 500px;
         background-repeat: no-repeat;
@@ -186,7 +186,7 @@ img {
    
 
     .imgbox { 
-        background-image: url("../../image/Rectangle180.png");
+        background-image: url("../../../templates/image/Rectangle180.png");
         text-align: center;
         height: 300px;
         background-repeat: no-repeat;

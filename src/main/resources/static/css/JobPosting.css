@@ -112,14 +112,14 @@
 
     .pageChangeLeftArrow {
         background-size: 25%;
-        background-image: url(left1.png);
+        background-image: url("../image/left1.png");
         background-repeat: no-repeat;
         background-position: 17px;
     }
 
     .pageChangeRightArrow {
         background-size: 25%;
-        background-image: url(right1.png);
+        background-image: url("../image/right1.png");
         background-repeat: no-repeat;
         background-position: 0.5px;
     }
@@ -127,7 +127,7 @@
     .pageChange > div > span {
         width: 30px;
         height: 30px;
-        padding: auto;
+        /*padding: auto;*/
         display: inline-block;
         line-height: 30px;
         margin: 0px;
@@ -421,14 +421,14 @@
 
     .pageChangeLeftArrow {
         background-size: 25%;
-        background-image: url(left1.png);
+        background-image: url("../image/left1.png");
         background-repeat: no-repeat;
         background-position: 17px;
     }
 
     .pageChangeRightArrow {
         background-size: 25%;
-        background-image: url(right1.png);
+        background-image: url("../image/right1.png");
         background-repeat: no-repeat;
         background-position: 0.5px;
     }
@@ -436,7 +436,7 @@
     .pageChange > div > span {
         width: 30px;
         height: 30px;
-        padding: auto;
+        /*padding: auto;*/
         display: inline-block;
         line-height: 30px;
         margin: 0px;
@@ -611,7 +611,7 @@
         left: -1px;
         opacity: 0;
         background-color: #ffffff;
-        background-image: url('logo_img.png');
+        background-image: url('../image/logo_img.png');
         background-size: contain;
         color: #F5F5F0 ;
         backdrop-filter: blur(30px);

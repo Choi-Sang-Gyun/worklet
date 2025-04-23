@@ -1,287 +1,179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/regiest.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="../css/user/regiest.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
-    <div class="form-container">
-      <div><h2 class="title">WORKLET</h2></div>
-        <h2>회원가입</h2>
-        <form action="##" method="post">
-        <div class="form">
-          <div class="form-row">
-            <label class="username">아이디</label>
-            <input type="text" id="id" placeholder="6~20자 영문자 또는 숫자를 입력해주세요 ">
-            
-          </div>
-      
-          <div class="form-row">
-            <label for="password">비밀번호</label>
-            <input type="password" id="password" placeholder="8~16글자의 영문자,숫자,특수문자 포함 입력해주세요">
-          </div>
-      
-          <div class="form-row">
-            <label for="passwordCheck">비밀번호 확인</label>
-            <input type="password" id="passwordCheck" placeholder="비밀번호를 다시 입력해주세요">
-          </div>
-      
-          <div class="form-row">
-            <label>이름</label>
-            <input type="text" id="name">
-          </div>
-      
-          <div class="form-row">
-            <label>성별</label>
-            <div class="radio-group">
-              <label><input type="radio" name="gender"> 남성</label>
-              <label><input type="radio" name="gender"> 여성</label>
-            </div>
-          </div>
-      
-          <div class="form-row">
-            <label>생년월일</label>
-            <div class="birth-row">
-              <input type="text" class="small" placeholder="년">
-              <input type="text" class="small" placeholder="월">
-              <input type="text" class="small" placeholder="일">
-            </div>
-          </div>
-      
-          <div class="form-row">
-            <label>연락처</label>
-            <input type="text" placeholder="000-0000-0000">
-          </div>
-      
-          <div class="form-row">
-            <label>이메일</label>
-            <input type="email" placeholder="example@email.com">
-          </div>
-      
-          <div class="form-row">
-            <label>희망고용형태</label>
-            <div class="option-group">
-              <label><input type="checkbox"> 정규직</label>
-              <label><input type="checkbox"> 계약직</label>
-              <label><input type="checkbox"> 인턴</label>
-              <label><input type="checkbox"> 아르바이트</label>
-            </div>
-          </div>
-          
-          <div class="form-row">
-            <label>희망직종경력</label>
-            <div class="option-group">
-              <label><input type="radio" name="career"> 없음</label>
-              <label><input type="radio" name="career"> 1년 이하</label>
-              <label><input type="radio" name="career"> 1년~2년</label>
-              <label><input type="radio" name="career"> 2년 이상</label>
-            </div>
-          </div>
-          
-      
-          <div class="form-group terms-box">
-            <label class="terms-title">가입 약관</label>
-            <div class="terms-inner-box">
-              <div class="terms-item">
-                <label>
-                  <input type="checkbox" class="agree">
-                  <span>개인회원 약관 동의(필수)</span>
-                </label>
-                <a href="#">자세히보기</a>
-              </div>
-              <div class="terms-item">
-                <label>
-                  <input type="checkbox" class="agree">
-                  <span>개인정보 수집 및 이용 동의(필수)</span>
-                </label>
-                <a href="#">자세히보기</a>
-              </div>
-              <div class="terms-item">
-                <label>
-                  <input type="checkbox" class="agree">
-                  <span>마케팅 정보 수신 동의 - 이메일(선택)</span>
-                </label>
-                <a href="#">자세히보기</a>
-              </div>
-              <div class="terms-item">
-                <label>
-                  <input type="checkbox" class="agree">
-                  <span>마케팅 정보 수신 동의 - MMS(선택)</span>
-                </label>
-                <a href="#">자세히보기</a>
-              </div>
-            </div>
-          
-            <div class="terms-all">
-              <label>
-                <input type="checkbox" id="checkAll">
-                <strong>전체 동의</strong>
-              </label>
-              <p class="terms-desc">
-                위의 가입 약관, 마케팅 정보 수신 동의(이메일, SMS/MMS) 등에 동의를 포함합니다.
-              </p>
-            </div>
-          </div>
-          
-          <button type="submit" class="submit-btn">회원 가입하기</button>
+<div th:replace="include/header :: headerFragment"></div>
+
+<div class="wrap">
+  <div class="form-container">
+    <h2 class="title">WORKLET</h2>
+    <h2>회원가입</h2>
+    <form action="/user/regist" method="post" name="registForm">
+      <div class="form">
+        <div class="form-row">
+          <label class="username">아이디</label>
+          <input type="text" name="userId" id="id" placeholder="6~20자 영문자 또는 숫자">
         </div>
-      </form>
+
+        <div class="form-row">
+          <label for="password">비밀번호</label>
+          <input type="password" name="userPw" id="password" placeholder="8~16자 영문, 숫자, 특수문자 포함">
+        </div>
+
+        <div class="form-row">
+          <label for="passwordCheck">비밀번호 확인</label>
+          <input type="password" id="passwordCheck" placeholder="비밀번호 재입력">
+        </div>
+
+        <div class="form-row">
+          <label>이름</label>
+          <input type="text" id="name" name="userName">
+        </div>
+
+        <div class="form-row">
+          <label>성별</label>
+          <div class="radio-group">
+            <label><input type="radio" name="userGender" value="남성"> 남성</label>
+            <label><input type="radio" name="userGender" value="여성"> 여성</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>생년월일</label>
+          <div class="birth-row">
+            <input type="text" class="small" id="birthYear" placeholder="년">
+            <input type="text" class="small" id="birthMonth" placeholder="월">
+            <input type="text" class="small" id="birthDay" placeholder="일">
+            <input type="hidden" name="userBirthday" id="userBirthday">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>연락처</label>
+          <input type="text" placeholder="000-0000-0000" name="userPhone">
+        </div>
+
+        <div class="form-row">
+          <label>이메일</label>
+          <input type="email" placeholder="example@email.com" name="userEmail">
+        </div>
+
+        <div class="form-row">
+          <label>희망고용형태 (최대 3개)</label>
+          <div class="option-group">
+            <label><input type="checkbox" name="wantJobType" value="정규직"> 정규직</label>
+            <label><input type="checkbox" name="wantJobType" value="계약직"> 계약직</label>
+            <label><input type="checkbox" name="wantJobType" value="인턴"> 인턴</label>
+            <label><input type="checkbox" name="wantJobType" value="아르바이트"> 아르바이트</label>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>희망직종경력</label>
+          <div class="option-group">
+            <label><input type="radio" name="wantJobWorkexpHowlong" value="0"> 없음</label>
+            <label><input type="radio" name="wantJobWorkexpHowlong" value="1"> 1년 이하</label>
+            <label><input type="radio" name="wantJobWorkexpHowlong" value="2"> 1년~2년</label>
+            <label><input type="radio" name="wantJobWorkexpHowlong" value="3"> 2년 이상</label>
+          </div>
+        </div>
+
+        <div class="form-group terms-box">
+          <label class="terms-title">가입 약관</label>
+          <div class="terms-inner-box">
+            <div class="terms-item">
+              <label><input type="checkbox" class="agree" required> 개인회원 약관 동의(필수)</label>
+            </div>
+            <div class="terms-item">
+              <label><input type="checkbox" class="agree" required> 개인정보 수집 및 이용 동의(필수)</label>
+            </div>
+            <div class="terms-item">
+              <label><input type="checkbox" class="agree"> 마케팅 정보 수신 동의 - 이메일(선택)</label>
+            </div>
+            <div class="terms-item">
+              <label><input type="checkbox" class="agree"> 마케팅 정보 수신 동의 - MMS(선택)</label>
+            </div>
+          </div>
+          <div class="terms-all">
+            <label><input type="checkbox" id="checkAll"> <strong>전체 동의</strong></label>
+            <p class="terms-desc">위의 약관에 모두 동의합니다.</p>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">회원 가입하기</button>
       </div>
+    </form>
+  </div>
+</div>
 
-        <script>
-          var submitBtn = document.querySelector(".submit-btn");
-          var id = document.getElementById("id");
-          var pw = document.getElementById("password");
-          var pwCheck = document.getElementById("passwordCheck");
-          var userName = document.getElementById("name");
-          var birth = document.querySelectorAll(".birth-row input");
-          var phoneInput = document.querySelector('input[placeholder="000-0000-0000"]');
-          var emailInput = document.querySelector('input[type="email"]');
-          var employmentTypes = document.querySelectorAll('.option-group input[type="checkbox"]');
-          var careerOptions = document.querySelectorAll('input[name="career"]');
-        
-          submitBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-        
-            var redId = /^[a-z]+[a-z0-9]{5,19}$/g;
-            var redPw = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
-            var phoneRegex = /^\d{3}-\d{3,4}-\d{4}$/;
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        
-            // 아이디 & 비밀번호
-            if(id.value === '') return alert('아이디를 입력해주세요');
-            if(!redId.test(id.value)) return alert('아이디 형식이 올바르지 않습니다');
-            if(pw.value === '') return alert('비밀번호를 입력해주세요');
-            if(!redPw.test(pw.value)) return alert('비밀번호 형식이 맞지 않습니다');
-            if(pw.value !== pwCheck.value) return alert('비밀번호가 일치하지 않습니다');
-            if(userName.value === '') return alert('이름을 입력해주세요');
-        
-            // 성별
-            var genderChecked = document.querySelector('input[name="gender"]:checked');
-            if(!genderChecked) return alert('성별을 선택해주세요');
-        
-            // 생년월일 검사 (정확히)
-            var year = birth[0].value.trim();
-            var month = birth[1].value.trim();
-            var day = birth[2].value.trim();
-            var currentYear = new Date().getFullYear();
-        
-            if (!/^\d{4}$/.test(year) || year < 1900 || year > currentYear) {
-              return alert('올바른 출생 년도를 입력해주세요 (예: 1995)');
-            }
-            if (!/^\d{1,2}$/.test(month) || month < 1 || month > 12) {
-              return alert('올바른 월을 입력해주세요 (1~12)');
-            }
-            if (!/^\d{1,2}$/.test(day) || day < 1 || day > 31) {
-              return alert('올바른 일을 입력해주세요 (1~31)');
-            }
-        
-            var daysInMonth = new Date(year, month, 0).getDate(); // 해당 월의 마지막 날
-            if (day > daysInMonth) {
-              return alert(`${month}월은 ${daysInMonth}일까지 존재합니다`);
-            }
-        
-            // 연락처
-            if(!phoneRegex.test(phoneInput.value)) return alert('연락처 형식이 올바르지 않습니다 (예: 010-1234-5678)');
-        
-            // 이메일
-            if(!emailRegex.test(emailInput.value)) return alert('올바른 이메일 형식을 입력해주세요');
-        
-            // 희망고용형태
-            var isEmploymentChecked = Array.from(employmentTypes).some(cb => cb.checked);
-            if(!isEmploymentChecked) return alert('희망 고용형태를 선택해주세요');
-        
-            // 희망직종경력
-            var isCareerChecked = Array.from(careerOptions).some(r => r.checked);
-            if(!isCareerChecked) return alert('희망 직종 경력을 선택해주세요');
-        
-            alert('모든 유효성 검사를 통과했습니다! 🎉');
-            // document.querySelector("form").submit(); // 실제 전송 시 사용
-          });
-        </script>
-        
+<script>
+  document.getElementById("checkAll").addEventListener("change", function () {
+    document.querySelectorAll(".agree").forEach(chk => chk.checked = this.checked);
+  });
 
-      <!-- 
-       // 생년월일
-  var birthInputs = document.querySelectorAll(".birth-row input");
+  document.querySelectorAll(".agree").forEach(chk => {
+    chk.addEventListener("change", function () {
+      const allChecked = Array.from(document.querySelectorAll(".agree")).every(cb => cb.checked);
+      document.getElementById("checkAll").checked = allChecked;
+    });
+  });
 
-  // 연락처 & 이메일
-  var phoneInput = document.querySelector('input[placeholder="000-0000-0000"]');
-  var emailInput = document.querySelector('input[type="email"]');
-
-  // 고용형태 (checkbox)
-  var employmentTypes = document.querySelectorAll('.option-group input[type="checkbox"]');
-
-  // 직종 경력 (radio)
-  var careerOptions = document.querySelectorAll('input[name="career"]');
-
-  submitBtn.addEventListener('click', function(e) {
+  document.querySelector(".submit-btn").addEventListener("click", function (e) {
     e.preventDefault();
 
-    var redId = /^[a-z]+[a-z0-9]{5,19}$/g;
-    var redPw = /^(?=.*[a-zA-Z])(?=.*[0-9])(?=.*[$`~!@$!%*#^?&\\(\\)\-_=+]).{8,16}$/;
-    var phoneRegex = /^\d{3}-\d{3,4}-\d{4}$/;
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const id = document.getElementById("id");
+    const pw = document.getElementById("password");
+    const pwCheck = document.getElementById("passwordCheck");
+    const name = document.getElementById("name");
+    const gender = document.querySelector('input[name="userGender"]:checked');
+    const birthYear = document.getElementById("birthYear").value.trim();
+    const birthMonth = document.getElementById("birthMonth").value.trim();
+    const birthDay = document.getElementById("birthDay").value.trim();
+    const userBirthday = document.getElementById("userBirthday");
 
-    // 아이디 & 비밀번호
-    if(id.value === '') return alert('아이디를 입력해주세요');
-    if(!redId.test(id.value)) return alert('아이디 형식이 올바르지 않습니다');
-    if(pw.value === '') return alert('비밀번호를 입력해주세요');
-    if(!redPw.test(pw.value)) return alert('비밀번호 형식이 맞지 않습니다');
-    if(pw.value !== pwCheck.value) return alert('비밀번호가 일치하지 않습니다');
-    if(userName.value === '') return alert('이름을 입력해주세요');
+    const phone = document.querySelector('input[name="userPhone"]');
+    const email = document.querySelector('input[name="userEmail"]');
+    const employmentTypes = document.querySelectorAll('.option-group input[type="checkbox"]');
+    const career = document.querySelector('input[name="wantJobWorkexpHowlong"]:checked');
 
-    // 성별
-    var genderChecked = document.querySelector('input[name="gender"]:checked');
-    if(!genderChecked) return alert('성별을 선택해주세요');
+    const redId = /^[a-z]+[a-z0-9]{5,19}$/g;
+    const redPw = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[~!@#$%^&*()_+]).{8,16}$/;
+    const phoneRegex = /^\d{3}-\d{3,4}-\d{4}$/;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // 생년월일
-    var birthValid = true;
-    birthInputs.forEach(input => {
-      if(input.value.trim() === '' || isNaN(input.value)) {
-        birthValid = false;
-      }
-    });
-    if(!birthValid) return alert('정확한 생년월일을 숫자로 입력해주세요');
+    if (!id.value || !redId.test(id.value)) return alert("올바른 아이디를 입력해주세요");
+    if (!pw.value || !redPw.test(pw.value)) return alert("올바른 비밀번호를 입력해주세요");
+    if (pw.value !== pwCheck.value) return alert("비밀번호가 일치하지 않습니다");
+    if (!name.value) return alert("이름을 입력해주세요");
+    if (!gender) return alert("성별을 선택해주세요");
 
-    // 연락처
-    if(!phoneRegex.test(phoneInput.value)) return alert('연락처 형식이 올바르지 않습니다 (예: 010-1234-5678)');
+    if (!/^\d{4}$/.test(birthYear) || birthYear < 1900) return alert("출생년도를 올바르게 입력해주세요");
+    if (birthMonth < 1 || birthMonth > 12) return alert("월은 1~12 사이여야 합니다");
+    if (birthDay < 1 || birthDay > 31) return alert("일은 1~31 사이여야 합니다");
+    const maxDay = new Date(birthYear, birthMonth, 0).getDate();
+    if (birthDay > maxDay) return alert(`${birthMonth}월은 ${maxDay}일까지 있습니다`);
+    userBirthday.value = `${birthYear}-${birthMonth.padStart(2, '0')}-${birthDay.padStart(2, '0')}`;
 
-    // 이메일
-    if(!emailRegex.test(emailInput.value)) return alert('올바른 이메일 형식을 입력해주세요');
+    if (!phoneRegex.test(phone.value)) return alert("전화번호 형식을 확인해주세요 (예: 010-1234-5678)");
+    if (!emailRegex.test(email.value)) return alert("이메일 형식을 확인해주세요");
 
-    // 희망고용형태
-    var isEmploymentChecked = Array.from(employmentTypes).some(cb => cb.checked);
-    if(!isEmploymentChecked) return alert('희망 고용형태를 선택해주세요');
+    const checkedEmployment = Array.from(employmentTypes).filter(cb => cb.checked);
+    if (checkedEmployment.length === 0 || checkedEmployment.length > 3) return alert("고용형태는 1~3개 선택해주세요");
+    if (!career) return alert("경력을 선택해주세요");
 
-    // 희망직종경력
-    var isCareerChecked = Array.from(careerOptions).some(r => r.checked);
-    if(!isCareerChecked) return alert('희망 직종 경력을 선택해주세요');
+    alert("회원가입이 완료되었습니다! 🎉");
+    document.forms["registForm"].submit();
+  });
+</script>
 
-      -->
+<div th:replace="include/footer :: footerFragment"></div>
 
-
-
-
-
-      <script>
-        var checkAll = document.getElementById("checkAll");
-        var agree = document.querySelectorAll(".agree");
-
-        checkAll.addEventListener('change', function () {
-          agree.forEach(checkbox => {
-            checkbox.checked = checkAll.checked;
-          });
-        })
-
-        agree.forEach(checkbox => {
-          checkbox.addEventListener('change', function () {
-          checkAll.checked = Array.from(agree).every(cb => cb.checked);
-          });  
-         });
-      </script>
-      
+<script src="../css/js/header.js"></script>
 </body>
 </html>

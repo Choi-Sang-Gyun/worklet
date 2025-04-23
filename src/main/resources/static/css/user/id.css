@@ -1,29 +1,46 @@
-.wrap{
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 
 .flex{
   display: flex;
 }
 
-#id, #pw{
-  border: none;
-  outline: none;
-  transition: border 0.2s ease;
+:root {
+  --main-color1: #255EEE;
+  --sub-color1: #87A9FF;
+  --sub-color2: #D2DFFF;
+  --text-color: #1d1d1d;
+  --text-color2: #D0D0D0;
+  --text-color3: #F5F5F0;
 }
 
-#id:focus, #pw:focus{
-  border: 1px solid #777;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Pretendard-Regular', sans-serif;
 }
 
-/* pc */
+.wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+/* PC (데스크탑) 버전 */
 @media (min-width: 768px) {
-  .ham-menu {
+
+  .wrap{
+    margin-top: 50px;
+  }
+
+  .ham-menu{
     display: none;
   }
 
@@ -77,7 +94,6 @@
   }
 
 
-
   header .login,
   header .logout {
     background-color: #fff;
@@ -90,12 +106,120 @@
     min-width: 186px;
   }
 
-@font-face {
+  .find-id-container input {
+    border: none;
+    outline: none;
+    transition: border 0.2s ease;
+  }
+
+  .find-id-container input:focus {
+    border: 1px solid #777;
+  }
+
+
+  .title {
+    font-size: 50px;
+    font-weight: 800;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+
+  .find-id-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    width: 100%;
+    max-width: 550px;
+    border: 1px solid #b8bfd3;
+  }
+
+
+  .find-id-container h2 {
+    text-align: center;
+    color: #255EEE;
+    margin-bottom: 25px;
+  }
+
+  .find-id-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 32px;
+  }
+
+
+  .find-id-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+  }
+
+  .find-id-form input {
+    width: 65%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    height: 50px;
+  }
+
+  .find-id-form button {
+    width: 65%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .find-id-form button:hover {
+    background-color: #0056b3;
+  }
+
+  /* --------footer----------- */
+  footer{
+    width: 100%;
+    height: 250px;
+    background-color: #D9D9D9;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+  }
+
+  footer p{
+    margin: 20px 0;
+  }
+
+  footer .footer-logo{
+    width: 300px;
+  }
+  footer .footer-logo img{
+    width: 100%;
+  }
+
+
+}
+
+
+
+
+/* ----모바일--------- */
+@media (max-width: 767px) {
+  @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
   }
+
 
   :root {
     --main-color1: #255EEE;
@@ -105,7 +229,7 @@
     --text-color2: #D0D0D0;
     --text-color3: #F5F5F0;
   }
-  
+
   * {
     margin: 0;
     padding: 0;
@@ -113,118 +237,16 @@
     font-family: 'Pretendard-Regular', sans-serif;
   }
 
+
+
   body {
+    background-color: #f9f9f9;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
     flex-direction: column;
   }
-
-  .login-container {
-    width: 520px;
-    height: 420px;
-    border: 1px solid #b8bfd3;
-    border-radius: 10px;
-    padding: 40px 32px;
-    text-align: center;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    
-    
-  }
-
-  .title {
-    color: #255EEE;
-    font-size: 50px;
-    font-weight: 800;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-#id,
-#pw{
-  width: 65%;
-  height: 50px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 0 12px;
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.login-button {
-  height: 40px;
-  margin-bottom: 30px;
-  
-}
-
-.login-button button  {
-  height: 40px;
-  width: 65%;
-  padding: 0 16px;
-  background-color: #255EEE;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 500;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
-  margin-top: 10px;
-}
-
-.login-links {
-  font-size: 15px;
-  color: #999;
-  margin-top: 10px;
-}
-
-.login-links a {
-  color: #777;
-  text-decoration: none;
-  margin: 0 6px;
-}
-
-.login-links span {
-  color: #bbb;
-}
-
-  /* --------footer----------- */
-  footer {
-    width: 100vw;
-    height: 250px;
-    background-color: #D9D9D9;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 100px;
-  }
-
-  footer p {
-    margin: 20px 0;
-  }
-
-  footer .footer-logo {
-    width: 300px;
-  }
-
-  footer .footer-logo img {
-    width: 100%;
-  }
-
-}
-
-
-/* 모바일화면 */
-
-@media (max-width: 767px) {
 
   header {
     width: 100%;
@@ -299,7 +321,7 @@
 
   header .login,
   header .logout {
-      display: none;
+    display: none;
   }
 
   .ham-menu {
@@ -344,117 +366,77 @@
     margin: 10px 0;
   }
 
-  @font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-  }
 
-  :root {
-    --main-color1: #255EEE;
-    --sub-color1: #87A9FF;
-    --sub-color2: #D2DFFF;
-    --text-color: #1d1d1d;
-    --text-color2: #D0D0D0;
-    --text-color3: #F5F5F0;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Pretendard-Regular', sans-serif;
-  }
-
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  .login-container {
-    width: 370px;
-    height: 400px;
-    border: 1px solid #b8bfd3;
-    border-radius: 10px;
-    padding: 40px 32px;
-    text-align: center;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    
+  .wrap{
+    width: 100%;
+    padding: 150px 0;
   }
 
   .title {
-    color: #255EEE;
-    font-size: 45px;
+    font-size: 50px;
     font-weight: 800;
     margin-bottom: 30px;
     margin-top: 30px;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   }
-  
-  .login-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+
+
+ 
+.find-id-container {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  width: 90%;
+  border: 1px solid #b8bfd3;
+}
+
+
+
+
+  .find-id-container h2 {
+    text-align: center;
+    color: #255EEE;
+    margin-bottom: 25px;
   }
 
-  #id,
-  #pw {
-  width: 90%;
-  height: 48px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: 0 12px;
-  font-size: 13px;
-  color: #333;
-  margin-bottom: 15px;
-}
 
-.login-button {
-  height: 40px;
-  margin-bottom: 20px;
-  
-}
+  .find-id-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+  }
 
-.login-button button  {
-  height: 40px;
-  width: 90%;
-  padding: 0 16px;
-  background-color: #255EEE;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: 500;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
-  margin-top: 5px;
-  
-}
+  .find-id-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+    height: 50px;
+  }
 
-.login-links {
-  font-size: 15px;
-  color: #999;
-  margin-top: 12px;
-  margin-bottom: 20px;
-}
+  .find-id-form button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
 
-.login-links a {
-  color: #777;
-  text-decoration: none;
-  margin: 0 6px;
-}
-
-.login-links span {
-  color: #bbb;
-}
+  .find-id-form button:hover {
+    background-color: #0056b3;
+  }
 
 
   /* --------footer----------- */
-  footer {
+  footer{
     width: 100%;
     background-color: #D9D9D9;
     align-items: center;
@@ -463,18 +445,15 @@
     flex-direction: column;
   }
 
-  footer p {
+  footer p{
     margin: 20px 0;
     font-size: 14px;
   }
 
-  footer .footer-logo {
+  footer .footer-logo{
     width: 100%
   }
-
-  footer .footer-logo img {
+  footer .footer-logo img{
     width: 250px;
   }
-
-
 }

@@ -9,3 +9,8 @@ hamburger.addEventListener('click', function() {
         span.classList.toggle('on');
     });
 });
+
+let headerLogo=document.querySelector(".headerLogo");
+headerLogo.addEventListener('click',function (){
+    location.href="/Board/mainPage ";
+})

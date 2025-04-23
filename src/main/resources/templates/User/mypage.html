@@ -1,60 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/mypage.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/user/mypage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 
 <body>
     <div class="wrap">
-        <header class="flex">
-            <h1><a href="#"><img src="./image/WORKLET_logo.png" alt="logo"></a></h1>
-            <ul class="flex menu">
-                <li><a href="#">기업소개</a></li>
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">채용공고</a></li>
-                <li><a href="#">이력서 가이드</a></li>
-                <li><a href="#">문의사항</a></li>
-            </ul>
-            <ul class="flex logout">
-                <li><a href="#" style="color: var(--main-color1); font-weight: bold;">마이페이지</a></li>
-                <li><a href="#">로그아웃</a></li>
-            </ul>
-            <ul class="flex login">
-                <li><a href="#" style="color: var(--main-color1);
-            font-weight: bold;">로그인</a></li>
-                <li><a href="#">회원가입</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
 
-            <div class="ham-menu">
-                <ul class="menu-list">
-                    <li><a href="#">기업소개</a></li>
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">채용공고</a></li>
-                    <li><a href="#">이력서 가이드</a></li>
-                    <li><a href="#">문의사항</a></li>
-                </ul>
-                <ul class="ham-logout">
-                    <li><a href="#" style="color: var(--main-color1); font-weight: bold;">마이페이지</a></li>
-                    <li><a href="#">로그아웃</a></li>
-                </ul>
-                <ul class="ham-login">
-                    <li><a href="#" style="color: var(--main-color1);
-                font-weight: bold;">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
-                </ul>
-            </div>
-        </header>
+        <div th:replace="include/header :: headerFragment"></div>
 
         <section class="sec01 flex">
             <div class="left">
@@ -62,26 +22,23 @@
                     <h3>이력서를 작성하고<br>
                         <span style="color: var(--main-color1);">추천공고</span>를 살펴보세요
                     </h3>
-                    <button type="button">
+                    <button type="button" class="resumeBtn">
                         <p>이력서 쓰러가기</p>
                         <figure>
-                            <img src="./image/Arrow-white.png" alt="">
+                            <img src="../image/Arrow-white.png" alt="">
                         </figure>
                     </button>
                 </div>
                 <div class="profile">
-                    <h3 class="name">
-                        김나연 님
-                    </h3>
+                    <h3 class="name" th:text="${userVO.userName}">이름</h3>
                     <ul class="email">
-                        <li>efoj@naver.com</li>
-                        <li>010-1234-1234</li>
+                        <li th:text="${userVO.userEmail}">이메일</li>
+                        <li th:text="${userVO.userPhone}">전화번호</li>
                     </ul>
                     <div class="HopefulEmployment">
                         <p>희망고용형태</p>
                         <ul class="flex">
-                            <li>정규직</li>
-                            <li>계약직</li>
+                            <li th:each="job : ${userVO.wantJobType}" th:text="${job}">고용형태</li>
                         </ul>
                     </div>
                     <div class="my-inquiry">
@@ -100,7 +57,7 @@
                     <button type="button">
                         <p>내 프로필 수정</p>
                         <figure>
-                            <img src="./image/Arrow-blue.png" alt="">
+                            <img src="../image/Arrow-blue.png" alt="">
                         </figure>
                     </button>
                 </div>
@@ -126,7 +83,7 @@
                                         <span>~05/23</span>
                                     </div>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="swiper-slide">
@@ -136,7 +93,7 @@
                                         <span>~05/23</span>
                                     </div>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="swiper-slide">
@@ -146,7 +103,7 @@
                                         <span>~05/23</span>
                                     </div>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="swiper-slide">
@@ -156,7 +113,7 @@
                                         <span>~05/23</span>
                                     </div>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="swiper-slide">
@@ -166,7 +123,7 @@
                                         <span>~05/23</span>
                                     </div>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                 </div>
                             </div>
@@ -188,7 +145,7 @@
                                         <span>~05/23</span>
                                     </div>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="swiper-slide">
@@ -198,7 +155,7 @@
                                         <span>~05/23</span>
                                     </div>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="swiper-slide">
@@ -208,7 +165,7 @@
                                         <span>~05/23</span>
                                     </div>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="swiper-slide">
@@ -218,7 +175,7 @@
                                         <span>~05/23</span>
                                     </div>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                 </div>
                                 <div class="swiper-slide">
@@ -228,7 +185,7 @@
                                         <span>~05/23</span>
                                     </div>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                 </div>
                             </div>
@@ -245,7 +202,7 @@
             <div class="sec03-title flex">
                 <p>ㅇㅇㅇ 님의 이력서</p>
                 <div class="plus flex">
-                    <img src="./image/plus.png" alt="">
+                    <img src="../image/plus.png" alt="">
                     추가
                 </div>
             </div>
@@ -291,7 +248,7 @@
             <ul class="flex">
                 <li>
                     <div class="sec04_img">
-                        <img src="./image/slideLogo.png" alt="">
+                        <img src="../image/slideLogo.png" alt="">
                     </div>
                     <p class="title">2025년 상반기 동원그룹 신입사원 모집</p>
                     <p class="name">동원산업(주)</p>
@@ -299,14 +256,14 @@
                     <button type="button">
                         <p>보러가기</p>
                         <figure> 
-                            <img src="./image/Arrow-blue.png" alt="">
+                            <img src="../image/Arrow-blue.png" alt="">
                         </figure>
 
                     </button>
                 </li>
                 <li>
                     <div class="sec04_img">
-                        <img src="./image/slideLogo.png" alt="">
+                        <img src="../image/slideLogo.png" alt="">
                     </div>
                     <p class="title">2025년 상반기 동원그룹 신입사원 모집</p>
                     <p class="name">동원산업(주)</p>
@@ -314,13 +271,13 @@
                     <button type="button">
                         <p>보러가기</p>
                         <figure> 
-                            <img src="./image/Arrow-blue.png" alt="">
+                            <img src="../image/Arrow-blue.png" alt="">
                         </figure>
                     </button>
                 </li>
                 <li>
                     <div class="sec04_img">
-                        <img src="./image/slideLogo.png" alt="">
+                        <img src="../image/slideLogo.png" alt="">
                     </div>
                     <p class="title">2025년 상반기 동원그룹 신입사원 모집</p>
                     <p class="name">동원산업(주)</p>
@@ -328,13 +285,13 @@
                     <button type="button">
                         <p>보러가기</p>
                         <figure> 
-                            <img src="./image/Arrow-blue.png" alt="">
+                            <img src="../image/Arrow-blue.png" alt="">
                         </figure>
                     </button>
                 </li>
                 <li>
                     <div class="sec04_img">
-                        <img src="./image/slideLogo.png" alt="">
+                        <img src="../image/slideLogo.png" alt="">
                     </div>
                     <p class="title">2025년 상반기 동원그룹 신입사원 모집</p>
                     <p class="name">동원산업(주)</p>
@@ -342,14 +299,14 @@
                     <button type="button">
                         <p>보러가기</p>
                         <figure> 
-                            <img src="./image/Arrow-blue.png" alt="">
+                            <img src="../image/Arrow-blue.png" alt="">
                         </figure>
                     </button>
                 </li>
             </ul>
             <button type="button">
                 <figure>
-                    <img src="./image/plus.png" alt="">
+                    <img src="../image/plus.png" alt="">
                 </figure>
                 <p>희망직종 추가, 수정</p>
             </button>
@@ -361,7 +318,7 @@
             <ul class="flex">
                 <li>
                     <div class="sec04_img">
-                        <img src="./image/slideLogo.png" alt="">
+                        <img src="../image/slideLogo.png" alt="">
                     </div>
                     <p class="title">2025년 상반기 동원그룹 신입사원 모집</p>
                     <p class="name">동원산업(주)</p>
@@ -369,14 +326,14 @@
                     <button type="button">
                         <p>보러가기</p>
                         <figure> 
-                            <img src="./image/Arrow-blue.png" alt="">
+                            <img src="../image/Arrow-blue.png" alt="">
                         </figure>
 
                     </button>
                 </li>
                 <li>
                     <div class="sec04_img">
-                        <img src="./image/slideLogo.png" alt="">
+                        <img src="../image/slideLogo.png" alt="">
                     </div>
                     <p class="title">2025년 상반기 동원그룹 신입사원 모집</p>
                     <p class="name">동원산업(주)</p>
@@ -384,13 +341,13 @@
                     <button type="button">
                         <p>보러가기</p>
                         <figure> 
-                            <img src="./image/Arrow-blue.png" alt="">
+                            <img src="../image/Arrow-blue.png" alt="">
                         </figure>
                     </button>
                 </li>
                 <li>
                     <div class="sec04_img">
-                        <img src="./image/slideLogo.png" alt="">
+                        <img src="../image/slideLogo.png" alt="">
                     </div>
                     <p class="title">2025년 상반기 동원그룹 신입사원 모집</p>
                     <p class="name">동원산업(주)</p>
@@ -398,13 +355,13 @@
                     <button type="button">
                         <p>보러가기</p>
                         <figure> 
-                            <img src="./image/Arrow-blue.png" alt="">
+                            <img src="../image/Arrow-blue.png" alt="">
                         </figure>
                     </button>
                 </li>
                 <li>
                     <div class="sec04_img">
-                        <img src="./image/slideLogo.png" alt="">
+                        <img src="../image/slideLogo.png" alt="">
                     </div>
                     <p class="title">2025년 상반기 동원그룹 신입사원 모집</p>
                     <p class="name">동원산업(주)</p>
@@ -412,29 +369,20 @@
                     <button type="button">
                         <p>보러가기</p>
                         <figure> 
-                            <img src="./image/Arrow-blue.png" alt="">
+                            <img src="../image/Arrow-blue.png" alt="">
                         </figure>
                     </button>
                 </li>
             </ul>
         </section>
 
-        
-        <footer class="flex">
-            <div class="footer-content">
-                <p>고객센터 0000-0000 (평일 09:00 ~ 19:00 토요일 09:00 ~ 15:00)  FAX 02-000-0000  Email oooo@gmail.com</p>
-                <p>대표 : 문경민</p>
-                <p>주소 : 서울시 강남구 테헤란로 7길 7</p>
-                <p>WORKLET All rights reserved.</p>
-            </div>
-            <div class="footer-logo">
-                <img src="./image/foote_logo.png" alt="">
-            </div>
-        </footer>
+
+        <div th:replace="include/footer :: footerFragment"></div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/mypage.js"></script>
+    <script src="../css/js/header.js"></script>
+    <script src="../css/js/mypage.js"></script>
 </body>
 
 </html>

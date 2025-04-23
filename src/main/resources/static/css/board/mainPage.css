@@ -19,7 +19,6 @@
 
 /* 모바일 (최대 너비 767px까지 적용) */
 @media (max-width: 767px) {
-
     header {
         width: 100%;
         height: 65px;
@@ -34,9 +33,9 @@
         z-index: 999;
     }
 
-    header .logout {
-        display: none;
-    }
+    /*header .logout {*/
+    /*    display: none;*/
+    /*}*/
 
     header h1 {
         width: 130px;
@@ -64,13 +63,15 @@
         transition: .4s;
     }
 
-    header .hamburger span.on:nth-child(2){
+    header .hamburger span.on:nth-child(2) {
         display: none;
     }
-    header .hamburger span.on:nth-child(1){
+
+    header .hamburger span.on:nth-child(1) {
         transform: rotate(45deg) translate(2px, 2px);
     }
-    header .hamburger span.on:nth-child(3){
+
+    header .hamburger span.on:nth-child(3) {
         transform: rotate(-45deg) translate(2px, -3px);
     }
 
@@ -94,7 +95,7 @@
         display: none;
     }
 
-    .ham-menu{
+    .ham-menu {
         position: fixed;
         top: 65px;
         right: -100%;
@@ -105,40 +106,42 @@
     }
 
     .ham-menu.on {
-        right: 0; 
+        right: 0;
     }
 
-    .ham-menu .menu-list{
+    .ham-menu .menu-list {
         width: 85%;
         margin: auto;
         margin-top: 50px;
     }
-    .ham-menu .menu-list li{
+
+    .ham-menu .menu-list li {
         border-bottom: 1px solid #d7d7d7;
-        padding: 20px 0 ;
+        padding: 20px 0;
         font-size: 18px;
         font-weight: bold;
     }
 
-    .ham-menu .ham-logout{
+    .ham-menu .ham-logout {
         display: none;
     }
 
-    .ham-menu .ham-logout, .ham-login{
+    .ham-menu .ham-logout,
+    .ham-login {
         width: 85%;
         margin: 5cqb auto;
     }
 
-    .ham-menu .ham-logout li, .ham-login li{
+    .ham-menu .ham-logout li,
+    .ham-login li {
         margin: 10px 0;
     }
 
 
     /* ------------------sec01--------------------- */
     #sec01 {
-        margin-top: 50px;
+        padding-top: 100px;
         width: 100%;
-        border: 1px solid #000;
     }
 
     #sec01>.flex {
@@ -766,9 +769,9 @@
         z-index: 999;
     }
 
-    header .logout {
-        display: none;
-    }
+    /*header .logout {*/
+    /*    display: none;*/
+    /*}*/
 
     header h1 {
         width: 170px;
@@ -810,7 +813,7 @@
         border-radius: 50px;
         gap: 50px;
         padding: 20px;
-        min-width: 186;
+        min-width: 186px;
     }
 
     #sec01 {

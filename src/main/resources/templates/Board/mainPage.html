@@ -1,68 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/mainPage.css">
+    <link rel="stylesheet" th:href="@{/css/reset.css}">
+    <link rel="stylesheet" th:href="@{/css/board/mainPage.css}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
     <div class="wrap">
-        <header class="flex">
-            <h1><a href="#"><img src="./image/WORKLET_logo.png" alt="logo"></a></h1>
-            <ul class="flex menu">
-                <li><a href="#">기업소개</a></li>
-                <li><a href="#">공지사항</a></li>
-                <li><a href="#">채용공고</a></li>
-                <li><a href="#">이력서 가이드</a></li>
-                <li><a href="#">문의사항</a></li>
-            </ul>
-            <ul class="flex logout">
-                <li><a href="#" style="color: var(--main-color1); font-weight: bold;">마이페이지</a></li>
-                <li><a href="#">로그아웃</a></li>
-            </ul>
-            <ul class="flex login">
-                <li><a href="#" style="color: var(--main-color1);
-            font-weight: bold;">로그인</a></li>
-                <li><a href="#">회원가입</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-
-            <div class="ham-menu">
-                <ul class="menu-list">
-                    <li><a href="#">기업소개</a></li>
-                    <li><a href="#">공지사항</a></li>
-                    <li><a href="#">채용공고</a></li>
-                    <li><a href="#">이력서 가이드</a></li>
-                    <li><a href="#">문의사항</a></li>
-                </ul>
-                <ul class="ham-logout">
-                    <li><a href="#" style="color: var(--main-color1); font-weight: bold;">마이페이지</a></li>
-                    <li><a href="#">로그아웃</a></li>
-                </ul>
-                <ul class="ham-login">
-                    <li><a href="#" style="color: var(--main-color1);
-                font-weight: bold;">로그인</a></li>
-                    <li><a href="#">회원가입</a></li>
-                </ul>
-            </div>
-        </header>
+        <div th:replace="include/header :: headerFragment"></div>
         <section id="sec01" >
             <div class="flex">
                 <div class="slide-wrap">
                     <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="./image/slideEx.jpg" alt=""></div>
-                            <div class="swiper-slide"><img src="./image/slideEx2.jpg" alt=""></div>
-                            <div class="swiper-slide"><img src="./image/slideEx.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="../image/slideEx.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="../image/slideEx2.jpg" alt=""></div>
+                            <div class="swiper-slide"><img src="../image/slideEx.jpg" alt=""></div>
                         </div>
                     </div>
                 </div>
@@ -73,22 +31,22 @@
                             <h3>바로가기 서비스</h3>
                             <ul class="flex serviceMenu">
                                 <li>
-                                    <a href="#">
-                                        <img src="./image/person.png" alt="">
+                                    <a href="/user/mypage">
+                                        <img src="../image/person.png" alt="">
                                     </a>
                                     <h4>마이페이지</h4>
                                     <p>바로가기</p>
                                 </li>
                                 <li>
-                                    <a href="#">
-                                        <img src="./image/question.png" alt="">
+                                    <a href="">
+                                        <img src="../image/question.png" alt="">
                                     </a>
                                     <h4>문의</h4>
                                     <p>바로가기</p>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <img src="./image/chat.png" alt="">
+                                        <img src="../image/chat.png" alt="">
                                     </a>
                                     <h4>최근 본 공고</h4>
                                     <p>바로가기</p>
@@ -100,12 +58,12 @@
                     <div class="sec01_notice">
                         <div class="notice_title flex">
                             <div class="notice_icon flex">
-                                <figure><img src="./image/notification.png" alt=""></figure>
+                                <figure><img src="../image/notification.png" alt=""></figure>
                                 <p>공지</p>
                             </div>
                             <div class="more flex">
                                 <p>더보기</p>
-                                <figure><img src="./image/Arrow.png" alt=""></figure>
+                                <figure><img src="../image/Arrow.png" alt=""></figure>
                             </div>
                         </div>
 
@@ -150,7 +108,7 @@
                 <ul class="flex">
                     <li>
                         <div class="flex">
-                            <figure><img src="./image/sec02_image01.png" alt=""></figure>
+                            <figure><img src="../image/sec02_image01.png" alt=""></figure>
                             <p>스크랩하면 <b style="color: #009BBA;">자동</b>으로
                                 <b style="color: #009BBA;">캘린더</b>에 저장!
                             </p>
@@ -158,7 +116,7 @@
                     </li>
                     <li>
                         <div class="flex">
-                            <figure><img src="./image/sec02_image02.png" alt=""></figure>
+                            <figure><img src="../image/sec02_image02.png" alt=""></figure>
                             <p>다가오는 일정이 있다면
                                 <b style="color: #8500EA;">알람</b>으로 잊지 않기!
                             </p>
@@ -166,7 +124,7 @@
                     </li>
                     <li>
                         <div class="flex">
-                            <figure><img src="./image/sec02_image03.png" alt=""></figure>
+                            <figure><img src="../image/sec02_image03.png" alt=""></figure>
                             <p><b style="color: #0048FF;">이력서</b>를 미리 작성해서
                                 취업률을 올려요!</p>
                         </div>
@@ -175,11 +133,11 @@
 
                 <button type="button">
                     <figure class="logo">
-                        <img src="./image/WORKLET_logo.png" alt="">
+                        <img src="../image/WORKLET_logo.png" alt="">
                     </figure>
                     <p>알아보기</p>
                     <div class="arrow">
-                        <img src="./image/Arrow.png" alt="">
+                        <img src="../image/Arrow.png" alt="">
                     </div>
                 </button>
             </div>
@@ -189,7 +147,7 @@
             <div class="sec03_wrap">
                 <div class="sec03Title flex">
                     <h2>진행 하고 있는 공채 소식</h2>
-                    <button type="button" class="flex">더보기 <figure><img src="./image/Arrow.png" alt=""></figure>
+                    <button type="button" class="flex">더보기 <figure><img src="../image/Arrow.png" alt=""></figure>
                     </button>
                 </div>
 
@@ -203,7 +161,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -231,7 +189,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -259,7 +217,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -287,7 +245,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -315,7 +273,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -343,7 +301,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -383,7 +341,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -411,7 +369,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -439,7 +397,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -467,7 +425,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -495,7 +453,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -523,7 +481,7 @@
                                     <h3>기획/영업</h3>
                                     <p>구글</p>
                                     <figure class="slide_logo">
-                                        <img src="./image/slideLogo.png" alt="">
+                                        <img src="../image/slideLogo.png" alt="">
                                     </figure>
                                     <div class="hidden-box">
                                         <h4>지원자격</h4>
@@ -563,7 +521,7 @@
                         <p>공지사항</p>
                         <div class="more flex">
                             <p>더보기</p>
-                            <figure><img src="./image/Arrow.png" alt=""></figure>
+                            <figure><img src="../image/Arrow.png" alt=""></figure>
                         </div>
                     </div>
 
@@ -599,7 +557,7 @@
                         <p>채용</p>
                         <div class="more flex">
                             <p>더보기</p>
-                            <figure><img src="./image/Arrow.png" alt=""></figure>
+                            <figure><img src="../image/Arrow.png" alt=""></figure>
                         </div>
                     </div>
 
@@ -634,34 +592,25 @@
             <div class="call">
                 <div class="call_title flex">
                     <div class="call_logo">
-                        <img src="./image/call.png" alt="">
+                        <img src="../image/call.png" alt="">
                     </div>
                     <h3>고객센터</h3>
                 </div>
                 <h2>7328-3242</h2>
                 <div class="call_image">
-                    <img src="./image/callimage.png" alt="">
+                    <img src="../image/callimage.png" alt="">
                 </div>
             </div>
         </section>
 
-        <footer class="flex">
-            <div class="footer-content">
-                <p>고객센터 0000-0000 (평일 09:00 ~ 19:00 토요일 09:00 ~ 15:00)  FAX 02-000-0000  Email oooo@gmail.com</p>
-                <p>대표 : 문경민</p>
-                <p>주소 : 서울시 강남구 테헤란로 7길 7</p>
-                <p>WORKLET All rights reserved.</p>
-            </div>
-            <div class="footer-logo">
-                <img src="./image/foote_logo.png" alt="">
-            </div>
-        </footer>
+        <div th:replace="include/footer :: footerFragment"></div>
     </div>
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./js/mainPage.js"></script>
+    <script th:src="@{/css/js/header.js}"></script>
+    <script th:src="@{/css/js/mainPage.js}"></script>
 </body>
 
 </html>

@@ -23,12 +23,11 @@
         top: 0;
         left: 0;
         z-index: 999;
-        border: 1px solid #000;
     }
 
-    header .logout {
-        display: none;
-    }
+    /*header .logout {*/
+    /*    display: none;*/
+    /*}*/
 
     header h1 {
         width: 130px;
@@ -136,7 +135,7 @@
         height: 100%;
         padding: 20px;
         margin: auto;
-        margin-top: 100px;
+        padding-top: 100px;
         align-items: center;
         gap: 50px;
         flex-direction: column;
@@ -822,9 +821,9 @@
         z-index: 999;
     }
 
-    header .logout {
-        display: none;
-    }
+    /*header .logout {*/
+    /*    display: none;*/
+    /*}*/
 
     header h1 {
         width: 170px;
@@ -866,13 +865,14 @@
         border-radius: 50px;
         gap: 50px;
         padding: 20px;
-        min-width: 186;
+        min-width: 186px;
     }
 
     /* -----------sec01-------------- */
     .sec01 {
         width: 80%;
         margin: auto;
+        min-width: 1400px;
         padding-top: 100px;
         height: 90vh;
         min-height: 800px;

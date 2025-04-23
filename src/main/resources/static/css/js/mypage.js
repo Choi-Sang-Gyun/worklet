@@ -24,16 +24,10 @@ var swiper6 = new Swiper(".mySwiper6", {
       },
 });
 
+let resumeBtn=document.querySelector(".resumeBtn");
+resumeBtn.addEventListener('click',function (){
+    location.href="/user/resume";
+})
 
-let hamburger = document.querySelector(".hamburger");
-let hamburgerSpans = document.querySelectorAll(".hamburger span");
-let hamMenu = document.querySelector(".ham-menu");
 
-hamburger.addEventListener('click', function() {
-    hamMenu.classList.toggle('on');
-    
-    hamburgerSpans.forEach(function(span) {
-        span.classList.toggle('on');
-    });
-});
 

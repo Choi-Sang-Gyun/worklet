@@ -1,11 +1,13 @@
 package com.project2.worklet.controller;
 
 import com.project2.worklet.jobPostingService.JobPostingService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+@Slf4j
 @Controller
 public class JobPostingController {
 
@@ -14,9 +16,23 @@ public class JobPostingController {
     private JobPostingService jobPostingService;
 
 
-    @GetMapping("/JobPosting")
+    @GetMapping("/jobposting")
     public String jobPosting() {
-        return "JobPosting";
+        return "jobposting";
     }
+
+    @GetMapping("/openjobposting")
+    public String openJobPosting() {
+        return "openjobposting";
+    }
+
+
+
+//    @GetMapping("/apiexam")
+//    public String apiExam() {
+//        int result = jobPostingService.postList();
+//        log.info("postList: " + result);
+//        return "apiexam";
+//    }
 
 }

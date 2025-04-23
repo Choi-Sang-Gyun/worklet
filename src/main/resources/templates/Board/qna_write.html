@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/qna/qna_write.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/board/qna_write.css">
 
 </head>
 <body>
+
+<div th:replace="include/header :: headerFragment"></div>
+
     <div id="wrap">
         <header class="imgbox">
             <div class="imgbox_title">
@@ -27,16 +30,16 @@
                         <p class="rightbox">고객님께서 소중한 의견을 작성해주시면 문의주신 내용을 바탕으로 답변해드리겠습니다. </p>
                     </div>
                     <div class="qna_write_page_inner_form">
-                        <form action="#" name="qnaForm" id="qnaForm" method="post">
+                        <form th:action="@{/qna/qnaForm}" method="post" th:object="${qnaVO}">
                             <div class="formUpper">
                                 <p class="qnaTitleWrap"><span class="pilsoo">*</span>제목</p> 
-                                <input type="text" class="qnaTitle" name="qnaTitle" placeholder="제목을 입력해 주세요" required><br>
+                                <input type="text" class="qnaTitle" name="inquiryTitle" placeholder="제목을 입력해 주세요" required><br>
                             </div>
                             <div class="formMid">
                                 <p class="qnaContentWrap"><span class="pilsoo">*</span>내용</p>
-                                <textarea class="qnaContent" name="qnaContent">내용을 입력해 주세요.</textarea><br>
+                                <textarea class="qnaContent" name="inquiryContent" placeholder="내용을 입력해주세요"></textarea><br>
                             </div>
-                            <input type="button" value="등록" class="qna_submit_btn">
+                            <input type="submit" value="등록" class="qna_submit_btn">
                         </form>
                     </div>
                 </div>
@@ -67,6 +70,7 @@
         
     </script>
 
+ <script src="../css/js/header.js}"></script>
 
 </body>
 </html>

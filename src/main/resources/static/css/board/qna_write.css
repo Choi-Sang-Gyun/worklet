@@ -1,3 +1,13 @@
+
+.flex {
+    display: flex;
+}
+
+.wrap {
+    background-color: #FAFAFA;
+    height: 100%;
+}
+
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -36,11 +46,12 @@ img {
 }
 
 @media(min-width: 767px) {
+
+
     .imgbox { 
-        background-image: url("../../../templates/image/Rectangle180.png");
+        background-image: url("/image/Rectangle180.png");
         text-align: center;
         height: 500px;
-        background-repeat: no-repeat;
     }
     
     .imgbox > .imgbox_title { 
@@ -136,10 +147,13 @@ img {
 
     .qnaTitle {
         width: 80%;
+        height: 35px;
         margin: 0 auto;
         border-radius: 5px;
+        font-size: 15px;
         border: 1px solid var(--text-color2);
     }
+
 
     .formMid {
         width: 100%;
@@ -158,7 +172,7 @@ img {
         float: right;
         width: 80%;
         height: 300px;
-        margin: 0 auto;
+        margin: 5px;
         /* margin-left: 2px; */
         resize: none;
         white-space: pre-line;
@@ -183,7 +197,8 @@ img {
 
 
 @media(max-width: 767px) {
-   
+
+
 
     .imgbox { 
         background-image: url("../../../templates/image/Rectangle180.png");

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/notice/notice_write.css">
+    <link rel="stylesheet" href="/css/board/notice_write.css">
 </head>
 <body>
     <div id="wrap">
@@ -16,7 +16,7 @@
                 <div class="notice_write_page_inner">
                     <div class="notice_write_page_inner_title">관리자 공지 게시판</div>
                     <div class="notice_write_page_inner_form">
-                        <form action="#" name="noticeForm" id="noticeForm" method="post">
+                        <form th:action="@{/notice/noticeForm}" name="noticeForm" id="noticeForm" method="post">
                             <div class="formUpper">
                                 <p class="noticeTitleWrap"><span class="pilsoo">*</span>제목</p> 
                                 <input type="text" class="noticeTitle" name="noticeTitle" placeholder="제목을 입력해 주세요" required><br>
@@ -25,7 +25,7 @@
                                 <p class="noticeContentWrap"><span class="pilsoo">*</span>내용</p>
                                 <textarea class="noticeContent" name="noticeContent">내용을 입력해 주세요.</textarea><br>
                             </div>
-                            <input type="button" value="등록" class="notice_submit_btn">
+                            <input type="submit" value="등록" class="notice_submit_btn">
                         </form>
                     </div>
                 </div>
